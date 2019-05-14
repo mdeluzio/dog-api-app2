@@ -7,8 +7,17 @@ function getImages(breedType) {
 
 function logResults(responseJson) {
     console.log(responseJson);
+
+    if (responseJson.status === "error") {
+        $(".first, .pictures").addClass("fail");
+        $(".second").removeClass("fail");
+    } else if (responseJson.status === "success") {
+        $(".first, .pictures").removeClass("fail");
+        $(".second").addClass("fail");
+    }
     
     $(".pictures").append("<img src='" + responseJson.message + "'>")
+    
 
     $(".images").removeClass('hidden');
 }

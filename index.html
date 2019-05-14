@@ -16,12 +16,13 @@
         <div class="container">
             <form>
                 <label for="breed">Please enter the breed of the dog you would like to see</label>
-                <input type="text" id="breed" placeholder="hound" required>
+                <input type="text" id="breed" placeholder="ex: hound" required>
                 <input type="submit" value="Get Dog!">
             </form>
 
             <section class="images hidden">
-                <h2>Here is your dog</h2>
+                <h2 class="first">Here is your dog</h2>
+                <h2 class="second fail">That breed was not found. Try again.</h2>
                 <div class="pictures"></div>
             </section>
         </div>
